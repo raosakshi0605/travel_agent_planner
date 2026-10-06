@@ -33,3 +33,20 @@ Then install the required package:
 
 ```bash
 pip install -r requirements.txt
+
+## Guardrails and Security
+
+The Travel Planner Agent includes guardrails to keep the agent focused on
+travel-related tasks and prevent it from responding to unrelated requests.
+
+Security measures include:
+
+- Restricting the agent to travel-related requests
+- Protection against prompt injection attempts
+- Preventing disclosure of system instructions
+- Preventing disclosure of API keys, passwords, tokens, and credentials
+- Rejecting unrelated requests such as coding, political, medical, or legal questions
+- Keeping sensitive environment variables out of the repository
+
+The guardrails were tested using multiple valid, invalid, prompt-injection,
+and sensitive-data requests.
