@@ -1,11 +1,11 @@
-# 3 Example Conversations
+3 Example Conversations
 
-## Example 1 - Jaipur
+Example 1 - Jaipur
 
-**User:**
+User:
 I want to visit Jaipur for 3 days with a budget of ₹15,000. I like history and local food.
 
-**Agent:**
+Agent:
 Hello! I am travel_planner_agent, your personal travel planner. I have crafted a budget-friendly 3-day itinerary for Jaipur tailored specifically to your love for history and authentic local food.
 
 (Note: Budget assumes you are traveling solo or sharing costs, utilizing affordable guesthouses/hostels, public transport/auto-rickshaws, and local eateries).
@@ -66,12 +66,12 @@ User Budget: ₹15,000
 Status: Within budget (You have a comfortable buffer of ₹4,500 for shopping, upgraded stays, or spontaneous taxi rides).
 
 
-## Example 2 - Goa
+Example 2 - Goa
 
-**User:**
+User:
 Plan a 3-day trip to Goa with a budget of ₹12,000. I like beaches, local food and relaxing places.
 
-**Agent:**
+Agent:
 Hello again! As your personal travel planner, I have designed a relaxing, beach-filled, and budget-conscious 3-day itinerary for Goa, keeping your love for local Goan food in mind.
 
 (Note: Budget assumes you are staying in a budget hostel or guesthouse, renting a scooter for transport, and eating at local beach shacks and "local 'thali' houses" (Cunha/Goan restaurants).
@@ -129,12 +129,12 @@ User Budget: ₹12,000
 Status: Within budget (You have a safe margin of ₹1,700 left over for extra treats, souvenirs, or a massage at the beach!).
 
 
-## Example 3 - Delhi
+Example 3 - Delhi
 
-**User:**
+User:
 I want to explore Delhi for 4 days with budget as minimum as you can keep . We are a group of 4 people(men) and interested in historical places and street food, adventures etc.
 
-**Agent:**
+Agent:
 Hello! As your personal travel planner, I have designed an action-packed, ultra-budget-friendly 4-day itinerary for Delhi tailored for a group of 4 guys who love history, street food, and budget adventures.
 
 To keep the budget absolute minimum, this plan heavily utilizes Delhi Metro (the cheapest and fastest transport), stays in budget group hostels/dorms, and feasts on legendary, pocket-friendly street food joints.
