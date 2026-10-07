@@ -73,6 +73,16 @@ The project uses Google ADK. After setting up the required environment, the agen
 adk web
 Then select travel_planner_agent from the ADK interface.
 
+Running the Evaluation
+To run the evaluation:
+
+python evaluation/evaluator.py
+
+
+The evaluator runs the test cases and generates the evaluation results in:
+
+evaluation_results.json
+
 ## Guardrails and Security
 
 The Travel Planner Agent includes guardrails to keep the agent focused on
@@ -97,6 +107,85 @@ and sensitive-data requests.
 
 ## Screenshots
 Screenshots of the project and sample responses are included in the screenshots folder.
+
+## Evaluation
+
+The Travel Planner Agent was evaluated using a dataset of 10 test cases covering normal travel requests, different destinations and durations, budgets, missing information, invalid inputs, user preferences, and requests outside the agent's scope.
+
+### Evaluation Approach
+
+The agent was tested using the evaluation dataset stored in `eval_dataset.json`.
+
+For each test case:
+
+1. The user input was given to the Travel Planner Agent.
+2. The actual response was recorded.
+3. The actual response was compared with the expected behavior.
+4. The response was evaluated using four metrics:
+   - Correctness
+   - Relevance
+   - Completeness
+   - Tool Usage
+5. Each metric was scored from 0 to 1.
+6. An overall score was calculated for all test cases.
+
+### Test Cases
+
+The evaluation contains the following test cases:
+
+- **TC01:** Valid 3-day Jaipur trip with ₹15,000 budget
+- **TC02:** Valid 5-day Delhi trip with ₹20,000 budget
+- **TC03:** Low-budget 3-day Goa trip
+- **TC04:** Missing destination
+- **TC05:** Missing budget
+- **TC06:** Invalid trip duration (0 days)
+- **TC07:** Negative budget
+- **TC08:** Historical-place preference in Agra
+- **TC09:** Local food and street-food preference in Lucknow
+- **TC10:** Non-travel question (Python programming)
+
+### Evaluation Metrics
+
+Each test case was evaluated using the following metrics:
+
+| Metric | Description |
+|---|---|
+| Correctness | Whether the response satisfies the user's request |
+| Relevance | Whether the response stays relevant to the request |
+| Completeness | Whether all important requirements are covered |
+| Tool Usage | Whether the appropriate tool was used when required |
+
+Each metric receives a score between **0 and 1**.
+
+### Overall Evaluation Score
+
+The agent achieved:
+
+- **Total Test Cases:** 10
+- **Passed Cases:** 10
+- **Partial Cases:** 0
+- **Failed Cases:** 0
+- **Overall Score:** 1.00
+- **Overall Percentage:** 100%
+
+### Failed Test Cases
+
+There were no failed test cases.
+
+All 10 test cases successfully satisfied their expected behaviors.
+
+### Suggestions for Improvement
+
+Although the agent achieved a 100% score on the current evaluation dataset, it can be improved further by:
+
+- Adding more edge cases and ambiguous travel requests.
+- Testing more destinations and different budget ranges.
+- Testing stronger prompt injection attempts.
+- Adding real-time tools for weather, transportation, hotels, and restaurants.
+- Improving budget estimation using real-time pricing data.
+- Adding more comprehensive tool-usage evaluation.
+- Using an LLM-as-a-Judge evaluator for more detailed and automated response evaluation.
+
 
 ## Limitations
 - Budget estimates are approximate.
